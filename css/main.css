@@ -1,29 +1,49 @@
 /* Main colors */
 /* 
-основний колір: 
-background: #FFFFFF;
-background: #2F303A;
-background: #2196F3;
-background: rgba(117, 117, 117, 1);
-background: #757575;
-background: #212121;
+main color: #212121;
+accent: #2196F3;
+additional color: #757575;
+links: rgba(255, 255, 255, 0.6);
+white: #FFFFFF;
+black: #000000;
+
 */
 
 :root {
-  --primary-while-color: #ffffff;
-  --primery-text-color: #212121;
-  --link-color: #2196f3;
-  --text-color: #757575;
+  --primary-black-color: #212121;
+  --secondary-color: #757575;
+  --accent: #2196f3;
+  --links-color: rgba(255, 255, 255, 0.6);
+  --white-color: #ffffff;
+  --black-color: #000000;
 }
 
 body {
   background-color: var(--primary-while-color);
+  font-family: Roboto;
 }
 
-.link {
+.link,
+link a {
   text-decoration: none;
+  list-style: none;
 }
 
-.list {
-  list-style: none;
+.logo,
+.header > a {
+  color: var(--accent);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26;
+  line-height: 1.19;
+  font-style: normal;
+}
+
+.header > a {
+  color: var(--black-color);
+}
+
+.hero {
+  background-image: url(./images/image_bg.jpg);
+  border: teal solid 2px;
 }
