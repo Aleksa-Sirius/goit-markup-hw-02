@@ -1,14 +1,3 @@
-/* Main colors */
-/* 
-main color: #212121;
-accent: #2196F3;
-additional color: #757575;
-links: rgba(255, 255, 255, 0.6);
-white: #FFFFFF;
-black: #000000;
-
-*/
-
 :root {
   --primary-black-color: #212121;
   --secondary-color: #757575;
@@ -33,14 +22,6 @@ a:focus.link {
   text-decoration: var(--accent) solid 3px;
 }
 
-a:hover,
-a:focus {
-  color: var(--accent);
-  outline: none;
-  text-decoration: underline;
-  text-decoration: var(--accent);
-}
-
 .list {
   list-style: none;
 }
@@ -49,7 +30,45 @@ a:focus {
 }
 
 /* --------- header -------------*/
-/*---fonts,color ----*/
+/*position*/
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 80px;
+}
+
+/*box model*/
+
+.header {
+  margin: 0 auto;
+  width: 100vw;
+  max-height: 80px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  justify-self: center;
+}
+
+/*fonts,color*/
 .logo,
 .header > a {
   color: var(--black-color);
@@ -74,37 +93,27 @@ a:focus {
   color: var(--secondary-color);
 }
 
-/*--- position ----*/
+/*------------------ Hero ----------------*/
 
-.header {
-  width: 100vw;
-  height: 80px;
-  border-bottom: 1px solid #ececec;
+/*position*/
+.hero {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  max-width: 100%;
+  max-height: 600px;
+}
+
+/*box model*/
+.hero {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-content: center;
   align-items: center;
 }
 
-.header-nav {
-  display: flex;
-  justify-content: flex-start;
-  align-self: center;
-  align-items: center;
-}
-
-.nav {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  justify-self: center;
-}
-
-/*------------------ Hero ----------------*/
 /*--- background,fonts,color ----*/
-
 .hero {
   background-image: url("./images/image_bg.jpg");
   background-color: var(--bg-color);
@@ -120,16 +129,6 @@ a:focus {
   line-height: 1.36;
   text-align: center;
   text-transform: uppercase;
-}
-
-/*-- position --*/
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
 }
 
 /*-- button --*/
@@ -153,46 +152,57 @@ a:focus {
 }
 
 /*--------- Benefits -----------------*/
+
+/* position */
+.benefits {
+  position: absolute;
+  top: 774px;
+  left: 215px;
+  max-width: 1170px;
+  max-height: 98px;
+}
+
+/*box model*/
+
+.benefit-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
 /*-- fonts,color ----*/
-.title {
+.benefits-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
 
-.text {
+.benefits-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   color: var(--secondary-color);
 }
 
-/*--- position ---*/
-.benefit-content {
-  width: 1170px;
-  height: 98px;
-  display: flex;
-  justify-content: space-around;
-}
-
 /*----------------------------- Our Jobs ---------------*/
-/*------- fonts,color----------*/
-.jobs-text {
-  color: var(--primary-black-color);
-  font-size: 36px;
-  line-height: 1.66;
-  font-weight: 700;
-  text-align: center;
+
+/*position*/
+.jobs {
+  position: absolute;
+  top: 966px;
+  left: 215px;
+  max-width: 1170px;
+  max-height: 386px;
 }
 
-/*---- position -----*/
-.jobs {
+/*box model*/
+.jobs-box {
   display: flex;
   flex-flow: column wrap;
   align-content: center;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .jobs-text {
@@ -205,11 +215,54 @@ a:focus {
   gap: 10px;
 }
 
+/*fonts,color*/
+.jobs-text {
+  color: var(--primary-black-color);
+  font-size: 36px;
+  line-height: 1.66;
+  font-weight: 700;
+  text-align: center;
+}
+
 /*---------- Our command -------------------*/
-/*------- fonts,color ---------*/
+/*position*/
+.command {
+  position: absolute;
+  top: 1446px;
+  left: 0;
+  max-width: 100%;
+  max-height: 648px;
+}
+
+.command-box {
+  position: absolute;
+  top: 94px;
+  left: 215px;
+}
+
+/*box model*/
+.command {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 15px;
+  justify-content: center;
+  align-content: center;
+}
+
+.command-text {
+  align-self: center;
+}
+
+.command-list {
+  display: flex;
+  gap: 15px;
+  align-content: center;
+}
+
+/*fonts,color*/
 .command-text,
-.command-text .command-name,
-.command-text .command-position {
+.command-name,
+.command-position {
   color: var(--primary-black-color);
   font-weight: 700;
   font-size: 36px;
@@ -217,40 +270,59 @@ a:focus {
   text-align: center;
 }
 
-.command-text .command-name {
+.command-position,
+.command-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
 }
 
-.command-text .command-position {
+.command-position {
   font-weight: 400;
   color: var(--secondary-color);
 }
 
-/*------ position ------*/
-.command {
-  display: flex;
-  flex-flow: column wrap;
-  gap: 10px;
-  justify-content: center;
-  align-content: center;
-}
-
-.command-text {
-  align-content: center;
-}
-
-.command-list {
-  display: flex;
-  gap: 10px;
-  align-content: center;
-}
 /*------------------------- Footer --------------------*/
-/*--- color,fonts,bg -----*/
+
+/*position*/
+.foo {
+  position: absolute;
+  top: 2094px;
+  left: 0;
+  max-width: 1660px;
+  max-height: 252px;
+}
+
+.foo-box {
+  position: absolute;
+  top: 60px;
+  left: 215px;
+}
+
+/*box model*/
+.foo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: space-around;
+  align-items: flex-start;
+}
+
+.adr {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/*color,fonts,bg*/
 
 .foo {
   background-color: var(--bg-color);
+  max-height: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 .foo > a {
@@ -275,18 +347,12 @@ a:focus {
   font-weight: 400;
 }
 
-/*-- position */
-.foo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-content: space-around;
-  align-items: flex-start;
+/*distant of words */
+
+.foo-box > a {
+  padding-bottom: 20px;
 }
 
-.adr {
-  margin: o;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+.foo-box .location {
+  padding-bottom: 9px;
 }
